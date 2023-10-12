@@ -1,0 +1,68 @@
+// Html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+    <link rel="stylesheet" href="task3.css">
+</head>
+<body>
+    <nav>
+        <a href="#"> Home</a>
+        <a href="#"> About us</a>
+        <a href="#"> Contact Us</a>
+        <a href="#"> Service</a>
+
+    </nav>
+    <button class="button">Hover Me</button>
+    <div class="element">Scroll me!</div>
+
+    
+</body>
+</html>
+
+//css
+
+nav{
+    text-decoration: none;
+    background-color: black;
+    height: 50px;
+
+}
+nav a{
+    text-decoration: none;
+    margin:30px;
+    align-items: right;
+    font-size: large;
+    font-weight: 20px;
+    padding-top: 50px;
+}
+.button {
+    background-color: #3498db;
+    color: #ffffff;
+    padding: 10px 20px;
+    margin-top: 30px;
+    border: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #2980b9;
+    color: #ecf0f1;
+}
+@keyframes scrollAnimation {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.element {
+    animation: scrollAnimation 2s ease infinite;
+}
